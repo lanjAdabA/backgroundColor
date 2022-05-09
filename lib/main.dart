@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "color",
       home: MyHomePage(title: "Title"),
     );
   }
@@ -42,6 +43,9 @@ class MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: const Text("Color_change_onClick"),
+        ),
         backgroundColor: _colors[_index % _colors.length],
         body: GestureDetector(
             onTap: () {
